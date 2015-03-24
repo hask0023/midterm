@@ -1,0 +1,205 @@
+*{
+	padding:0;
+	margin:0;	
+}
+html {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    overflow: hidden;
+}
+html, body{
+	background-color: #000;
+
+}
+body{
+	font-size:5vmin;	
+}
+h2{
+	font-size:2rem;
+	line-height:1.6;
+
+     font-family: 'Lucida Sans Typewriter', 'Lucida Console', monaco, 'Bitstream Vera Sans Mono', monospace;
+    text-align: center;
+}
+p{
+	font-size:1rem;
+	line-height:2;
+/*	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;	*/
+    font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+}
+
+.contactcolor {
+    fill: #eee;;
+}
+
+
+
+
+/**************************************
+          PAGES
+***************************************/
+[data-role=page]{
+    
+	background-color:#000;
+	color: #eee;
+
+	position:absolute;
+	top:7rem;
+	padding:1rem 1rem 4rem 1rem;
+
+    left: 100%;
+    right: 0;  
+
+    transition: left 0.2s, opacity 1.5s ease-in-out;
+    -moz-transition: left 0.2s, opacity 1.5s ease-in-out;
+    -webkit-transition: left 0.2s, opacity 1.5s ease-in-out;
+    opacity: 0;
+    
+    
+    
+    
+}
+.active{
+
+    opacity: 1;
+    left: 0;
+    
+	
+}
+
+[data-role=overlay]{
+  display: none;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:10;
+  height:100%;
+  width:100%;
+  background-color: rgba(0,0,0,0.82);
+}
+
+[data-role=pop-up]{
+    display: none;
+  position:fixed;
+  top:20%;
+  left:10%;
+  width: 50%;
+  z-index:15;
+  max-height:80%;
+  padding:5vh;
+  border:1px solid #333;
+  min-height:10%;
+  color:#fff;
+  background-color:#666;
+  box-shadow:1px 1px 2px rgb(0,0,0);
+}
+
+/**************************************
+          TITLE
+***************************************/
+.apptitle{
+	height:3rem;
+	background-color: #333;
+	color: #fff;
+    
+}
+.apptitle h1{
+	font-size: 1.0rem;
+	line-height: 2rem;
+	padding: 0.5rem 1.0rem;
+	text-align:center;
+	letter-spacing: 5px;
+/*	word-spacing: 5px;*/
+	text-transform:uppercase;
+
+    font-family: 'Lucida Sans Typewriter', 'Lucida Console', monaco, 'Bitstream Vera Sans Mono', monospace;
+    width: 100%;
+}
+
+/**************************************
+          NAVBAR 
+***************************************/
+.tabs{
+	height: 4rem;
+   
+}
+.tabs ul{
+	list-style:none;
+   
+
+}
+.tabs li{
+	float:left;
+	height:4rem;
+}
+#maptab {
+    background-image: url('../img/mapicon2.svg'); 
+    background-repeat: no-repeat;
+    background-position: 5%;
+    background-size: 15px 15px; 
+   
+   
+}
+
+#hometab {
+     background-image: url('../img/homeicon.svg'); 
+    background-repeat: no-repeat;
+    background-position: 5%;
+    background-size: 15px 15px;
+    
+}
+
+#contactTab{
+    background-image: url('../img/contacticon.svg'); 
+    background-repeat: no-repeat;
+    background-position: 5%;
+    background-size: 15px 15px; 
+}
+
+   
+   
+/*	background-color:red;*/
+
+
+.li-1-3{
+	width: 33%;	
+	/* for 3 tabs each is 33% */
+}
+
+.li-1-2{
+	width: 50%;	
+	/* for 3 tabs each is 33% */
+}
+
+.tabs [data-role=pagelink]{
+    color: #fff;
+
+    padding-left: 0.5rem;
+    background: #333;
+	display:block;
+	text-align:center;
+	height:4rem;
+	font-size:1rem;
+	font-weight:bold;
+
+        font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;
+	line-height:4rem;
+	text-decoration:none;
+
+	-webkit-box-shadow: inset 2px 2px 6px rgba(0,0,0, 0.5);
+	-moz-box-shadow: inset 2px 2px 6px rgba(0,0,0, 0.5); 
+	box-shadow: inset 2px 2px 6px rgba(0,0,0, 0.5);
+}
+.tabs [data-role=pagelink].activetab{
+	background:#000;	/* match the background of the screen */
+	color: #6E5BFF;		/* colour makes the active tab jump forward */
+    
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+}
