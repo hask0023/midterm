@@ -5,9 +5,8 @@
         <meta charset="utf-8" />
          <meta name="viewport" content="width=device-width" />
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8BTwbN0s9UfefqLk9vs32OSNJQz22Iag"></script>
-<!--        <script src="cordova.js"></script>-->
+        <script src="cordova.js"></script>
          <script type="text/javascript" src="js/main.js"></script>
-        <script type="text/javascript" src="js/store2.min.js"></script>
         <script type="text/javascript" src="js/hammer.js"></script>
    
         <link rel="stylesheet" type="text/css" href="css/styles.css" />
@@ -16,52 +15,45 @@
     <body>
         
 <header class="apptitle">
-  <h1>Midterm App</h1>
+  <h1> Hask0023 - Midterm App</h1>
 </header>
         
-<!--
-<nav class="tabs">
-  <ul>
-    <li class="li-1-2" ><a href="#home" data-role="pagelink" id="hometab" class="activetab">Home</a></li>
-    <li class="li-1-2" ><a href="#map" data-role="pagelink" id="maptab">Map</a></li>
-  </ul>
-</nav>
--->
+
 <div class="wrapper">
         
 <section data-role="page" id="home" class="active">
-  <h2>Contacts</h2>
-    
-<!--    <ListView id="contactlist">Items</ListView>-->
-<ul id="listView" data-role="listview">
-    <li>Steve Haskins</li>
-</ul>
+    <h2>Contacts</h2>
+
+    <ul id="listView" data-role="listview">    </ul>
        
 
-    <p id="displaynames"></p>
+<!--    <p id="displaynames"></p>-->
     
 </section>
 
 <div data-role="overlay">&nbsp;</div>    
 
-        <div data-role="pop-up">
-        <h3>Full Information</h3>
+
+<div data-role="pop-up">
+
         
-            <p id="fullName">Steve Haskins</p>
-            <p id="homeNum">349743974</p>
-            <p id="mobileNum">434123213</p>
-            
+            <p id="fullName"></p>
+            <p id="homeNum"></p>
+            <p id="mobileNum"></p>
+            <button type="button" id="cancelBtn">Go Back</button>
         
-        </div>
+</div>
 
 
         
 <section data-role="page" id="map">
+      <button type="button" id="backBtn">Back</button>
     <h2>Map</h2>
     
-    <div id="map-canvas" style="width:250px;height:250px;" /> </div>
+<!--    <div id="map-canvas" style="width:250px;height:250px;" /> </div>-->
+    <div id="map-canvas"  /> </div>
    
-    
+  
 </section>
 
     

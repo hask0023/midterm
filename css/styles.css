@@ -5,7 +5,8 @@
 html {
     -ms-touch-action: manipulation;
     touch-action: manipulation;
-    overflow: hidden;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 html, body{
 	background-color: #000;
@@ -37,20 +38,37 @@ canvas {
     fill: #eee;;
 }
 
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
 
+li {
+    border: 1px solid white;
+    padding: 5%;
+}
 
+button {
+    padding: 5%;
+}
 
+#map-canvas {
+    margin: 0 auto;
+    width: 270px;
+    height: 400px;
+}
 /**************************************
           PAGES
 ***************************************/
 [data-role=page]{
-    
+  
 	background-color:#000;
 	color: #eee;
-
+    overflow-x: hidden;
 	position:absolute;
-	top:7rem;
-	padding:1rem 1rem 4rem 1rem;
+	top:4rem;
+	padding:1rem 1rem 2rem 1rem;
 
     left: 100%;
     right: 0;  
@@ -88,7 +106,7 @@ canvas {
   position:fixed;
   top:20%;
   left:10%;
-  width: 50%;
+  width: 60%;
   z-index:15;
   max-height:80%;
   padding:5vh;
@@ -121,85 +139,7 @@ canvas {
     width: 100%;
 }
 
-/**************************************
-          NAVBAR 
-***************************************/
-.tabs{
-	height: 4rem;
-   
-}
-.tabs ul{
-	list-style:none;
-   
 
-}
-.tabs li{
-	float:left;
-	height:4rem;
-}
-#maptab {
-    background-image: url('../img/mapicon2.svg'); 
-    background-repeat: no-repeat;
-    background-position: 5%;
-    background-size: 15px 15px; 
-   
-   
-}
-
-#hometab {
-     background-image: url('../img/homeicon.svg'); 
-    background-repeat: no-repeat;
-    background-position: 5%;
-    background-size: 15px 15px;
-    
-}
-
-#contactTab{
-    background-image: url('../img/contacticon.svg'); 
-    background-repeat: no-repeat;
-    background-position: 5%;
-    background-size: 15px 15px; 
-}
 
    
    
-/*	background-color:red;*/
-
-
-.li-1-3{
-	width: 33%;	
-	/* for 3 tabs each is 33% */
-}
-
-.li-1-2{
-	width: 50%;	
-	/* for 3 tabs each is 33% */
-}
-
-.tabs [data-role=pagelink]{
-    color: #fff;
-
-    padding-left: 0.5rem;
-    background: #333;
-	display:block;
-	text-align:center;
-	height:4rem;
-	font-size:1rem;
-	font-weight:bold;
-
-        font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;
-	line-height:4rem;
-	text-decoration:none;
-
-	-webkit-box-shadow: inset 2px 2px 6px rgba(0,0,0, 0.5);
-	-moz-box-shadow: inset 2px 2px 6px rgba(0,0,0, 0.5); 
-	box-shadow: inset 2px 2px 6px rgba(0,0,0, 0.5);
-}
-.tabs [data-role=pagelink].activetab{
-	background:#000;	/* match the background of the screen */
-	color: #6E5BFF;		/* colour makes the active tab jump forward */
-    
-	-webkit-box-shadow:none;
-	-moz-box-shadow:none;
-	box-shadow:none;
-}
